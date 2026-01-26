@@ -12,4 +12,32 @@
 
 -- write your sql code here
 
-SELECT * from countries;
+SELECT * FROM countries;
+
+SELECT country, population FROM countries;
+
+SELECT country FROM countries 
+WHERE Continent = 'Europe';
+
+SELECT country FROM countries
+WHERE population > 100000000;
+
+SELECT country FROM countries
+WHERE GDPPerCapita > 20000 
+AND Continent = 'Asia';
+
+SELECT country FROM countries
+WHERE LiteracyPercent < 70;
+
+SELECT country FROM countries
+WHERE CoastlineRatio == 0;
+
+SELECT country FROM countries
+WHERE Country LIKE 'A%';
+
+SELECT country FROM countries
+WHERE COuntry LIKE '%United%';
+
+SELECT country FROM countries
+WHERE Birthrate > Deathrate
+AND Population > 50000000;
