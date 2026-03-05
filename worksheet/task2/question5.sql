@@ -6,5 +6,5 @@ SELECT s.StudentID, s.FirstName, s.LastName, SUM(c.Credits) AS TotalCreditsPasse
 FROM Student s
 JOIN Enrolment e ON s.StudentID = e.StudentID
 JOIN Course c ON e.CourseID = c.CourseID
-WHERE c.Credits >= 40
+WHERE e.Grade >= 40
 GROUP BY s.StudentID, s.FirstName, s.LastName
