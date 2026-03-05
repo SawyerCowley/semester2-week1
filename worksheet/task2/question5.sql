@@ -7,4 +7,4 @@ FROM Student s
 JOIN Enrolment e ON s.StudentID = e.StudentID
 JOIN Course c ON e.CourseID = c.CourseID
 WHERE c.Credits >= 40
-GROUP BY s.StudentID
+GROUP BY s.StudentID, s.FirstName, s.LastName
