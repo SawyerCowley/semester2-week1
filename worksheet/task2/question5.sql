@@ -2,9 +2,8 @@
 -- Expected Columns:
 -- StudentId, FirstName, LastName, TotalCreditsPassed
 
-SELECT s.StudentID, s.FirstName, s.LastName, c.Course AS TotalCreditsPassed
+SELECT s.StudentID, s.FirstName, s.LastName, SUM(c.Credits) AS TotalCreditsPassed
 FROM Student s
 JOIN Enrolment e ON s.StudentID = e.StudentID
 JOIN Course c ON e.CourseID = c.CourseID
-
-(WHERE c.Credits >= 40)
+WHERE c.Credits >= 40
